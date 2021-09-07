@@ -7,31 +7,31 @@ const movies = [
   {
     id: 1,
     url: "https://i2.wp.com/leninetudo.com/wp-content/uploads/2021/09/La-Casa-de-Papel-5a-Temporada-Completa-2021-Dublado.jpg?fit=1100%2C1049&ssl=1",
-    video: 'http://localhost:3000/la-casa-de-papel.mp4',
+    video: 'la-casa-de-papel.mp4',
     position: { x: 80, y: 198 },
   },
   {
     id: 2,
     url: "https://i2.wp.com/leninetudo.com/wp-content/uploads/2021/09/La-Casa-de-Papel-5a-Temporada-Completa-2021-Dublado.jpg?fit=1100%2C1049&ssl=1",
-    video: 'http://localhost:3000/la-casa-de-papel.mp4',
+    video: 'la-casa-de-papel.mp4',
     position: { x: 432, y: 198 },
   },
   {
     id: 3,
     url: "https://i2.wp.com/leninetudo.com/wp-content/uploads/2021/09/La-Casa-de-Papel-5a-Temporada-Completa-2021-Dublado.jpg?fit=1100%2C1049&ssl=1",
-    video: 'http://localhost:3000/la-casa-de-papel.mp4',
+    video: 'la-casa-de-papel.mp4',
     position: { x: 785, y: 198 },
   },
   {
     id: 4,
     url: "https://i2.wp.com/leninetudo.com/wp-content/uploads/2021/09/La-Casa-de-Papel-5a-Temporada-Completa-2021-Dublado.jpg?fit=1100%2C1049&ssl=1",
-    video: 'http://localhost:3000/la-casa-de-papel.mp4',
+    video: 'la-casa-de-papel.mp4',
     position: { x: 1137, y: 198 },
   },
   {
     id: 5,
     url: "https://i2.wp.com/leninetudo.com/wp-content/uploads/2021/09/La-Casa-de-Papel-5a-Temporada-Completa-2021-Dublado.jpg?fit=1100%2C1049&ssl=1",
-    video: 'http://localhost:3000/la-casa-de-papel.mp4',
+    video: 'la-casa-de-papel.mp4',
     position: { x: 1490, y: 198 },
   },
 ];
