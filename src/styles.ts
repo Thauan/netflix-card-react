@@ -6,27 +6,22 @@ interface PositionProps {
   expand: boolean;
 }
 
-interface SizeProps {
-  expand: boolean;
-}
-
 export const Border = styled.div<PositionProps>`
   border: 5px solid white;
-  height: 530px;
+  height: 520px;
   position: absolute;
   z-index: 5;
   top: ${(props) => props.y}px;
   left: ${(props) => props.x}px;
-  width: ${(props) => props.expand ? '510px' : '320px'};
-  transition: left ease 1s;
+  width: ${(props) => props.expand ? '500px' : '320px'};
+  transition: left ease 500ms, width 300ms ease 100ms;
 `;
 
-export const ImageItem = styled.img<SizeProps>`
-  object-fit: cover;
-  width: ${(props) => props.expand ? '500px' : '320px'};
-  transition: width ease 0.2s;
-  height: 512px;
+
+export const Item = styled.div`
+  margin: 1rem;
 `;
+
 
 export const Container = styled.div`
   display: flex;
