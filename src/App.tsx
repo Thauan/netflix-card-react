@@ -47,7 +47,7 @@ const App = () => {
   };
   
   const setInitialPosition = () => {
-    setX(movies[0]?.position.x);
+    setX(movies[0]?.position.x + 17);
     setY(movies[0]?.position.y);
   }
 
