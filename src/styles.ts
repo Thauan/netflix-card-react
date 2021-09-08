@@ -33,5 +33,5 @@ export const Container = styled.div`
   align-items: center;
   height: 100vh;
   transform: scale(0.9);
-  width: min-content;
+  width: -webkit-fill-available;
 `;
