@@ -8,13 +8,13 @@ const movies = [
     id: 1,
     url: "https://i2.wp.com/leninetudo.com/wp-content/uploads/2021/09/La-Casa-de-Papel-5a-Temporada-Completa-2021-Dublado.jpg?fit=1100%2C1049&ssl=1",
     video: 'la-casa-de-papel.mp4',
-    position: { x: 80, y: 198, diff: -100 },
+    position: { x: 80, y: 198, diff: -92 },
   },
   {
     id: 2,
     url: "https://i2.wp.com/leninetudo.com/wp-content/uploads/2021/09/La-Casa-de-Papel-5a-Temporada-Completa-2021-Dublado.jpg?fit=1100%2C1049&ssl=1",
     video: 'la-casa-de-papel.mp4',
-    position: { x: 432, y: 198, diff: -65 },
+    position: { x: 432, y: 198, diff: -60 },
   },
   {
     id: 3,
@@ -32,7 +32,7 @@ const movies = [
     id: 5,
     url: "https://i2.wp.com/leninetudo.com/wp-content/uploads/2021/09/La-Casa-de-Papel-5a-Temporada-Completa-2021-Dublado.jpg?fit=1100%2C1049&ssl=1",
     video: 'la-casa-de-papel.mp4',
-    position: { x: 1490, y: 198, diff: 42 },
+    position: { x: 1490, y: 198, diff: 35 },
   },
 ];
 
@@ -48,11 +48,11 @@ const App = () => {
 
   const getPosition = (id: any, diff: any, x?: any, y?: any ) => {
 
-    if (id) {
+    if (id && x !== undefined && y !== undefined) {
       setExpand(true);
       setX(parseInt(x));
       setDiffX(diff);
-      setY(parseInt(y) - 40);
+      setY(parseInt(y) - 25);
       setLastX(parseInt(x));
       setLastIdHovered(id);
 
@@ -64,7 +64,7 @@ const App = () => {
 
   const setInitialPosition = () => {
     setX(movies[0]?.position.x - 58);
-    setY(movies[0]?.position.y - 34);
+    setY(movies[0]?.position.y - 25);
   };
 
   const closeVideoShow = () => {
@@ -80,7 +80,7 @@ const App = () => {
     <>
       <GlobalStyle />
       <Container>
-        <Border y={y + 10} x={x && expand ? x + diffX : x} expand={expand} />
+        <Border y={y} x={x && expand ? x + diffX : x} expand={expand} />
         {movies.map((item) => {
           return (
             <Item key={item.id}>

@@ -27,7 +27,6 @@ const MediaItem = ({
   closeVideo,
 }: MediaItemProps) => {
   const itemHover: React.RefObject<HTMLDivElement> = useRef<any>(null);
-  // const [blur, setBlur] = useState(true)
   const [position, setPosition] = useState<PositionCordinatesProps>({
     y: 0,
     x: 0,
@@ -36,8 +35,12 @@ const MediaItem = ({
   useEffect(() => {
     const positionCordinates = itemHover.current?.getBoundingClientRect();
 
-    console.log(itemHover.current?.getBoundingClientRect());
-    setPosition({ y: positionCordinates!.y, x: positionCordinates!.x});
+    if (
+      positionCordinates!.y !== undefined &&
+      positionCordinates!.x !== undefined
+    ) {
+      setPosition({ y: positionCordinates!.y, x: positionCordinates!.x });
+    }
   }, []);
 
   return (
@@ -46,14 +49,7 @@ const MediaItem = ({
         <ImageItem
           expand={expand}
           src={item.url}
-          onMouseMove={() =>
-            getPosition(
-              item.id,
-              diff,
-              itemHover.current?.getBoundingClientRect().x,
-              itemHover.current?.getBoundingClientRect().y
-            )
-          }
+          onMouseMove={() => getPosition(item.id, diff, position.x, position.y)}
         />
       ) : (
         <VideoItem
@@ -62,14 +58,7 @@ const MediaItem = ({
           expand={expand}
           itemId={item.id}
           closeVideo={() => closeVideo()}
-          getPosition={() =>
-            getPosition(
-              item.id,
-              diff,
-              itemHover.current?.getBoundingClientRect().x,
-              itemHover.current?.getBoundingClientRect().y
-            )
-          }
+          getPosition={() => getPosition(item.id, diff, position.x, position.y)}
         />
       )}
     </Item>

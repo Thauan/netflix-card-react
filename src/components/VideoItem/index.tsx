@@ -1,4 +1,4 @@
-import React from "react";
+import React, { ForwardedRef} from "react";
 import { Video } from "./styles";
 
 interface VideoItemProps {
@@ -8,9 +8,11 @@ interface VideoItemProps {
   getPosition: any;
   closeVideo: any;
   itemId: number;
+  ref?: any;
 }
 
-const VideoItem = ({ source, blur, expand, getPosition, itemId, closeVideo }: VideoItemProps) => {
+const VideoItem = ({ source, blur, expand, getPosition, itemId, closeVideo, ref }: VideoItemProps) => {
+  // const refVideo = React.forwardRef(ref);
   
   return (
     <>
@@ -19,6 +21,7 @@ const VideoItem = ({ source, blur, expand, getPosition, itemId, closeVideo }: Vi
         onMouseMove={() => getPosition(itemId)}
         onMouseDown={() => closeVideo()}
         expand={expand}
+        // ref={refVideo}
         muted
         autoPlay // working
         loop
