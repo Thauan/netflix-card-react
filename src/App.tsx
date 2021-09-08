@@ -64,7 +64,7 @@ const App = () => {
 
   const setInitialPosition = () => {
     setX(movies[0]?.position.x - 58);
-    setY(movies[0]?.position.y - 25);
+    setY(movies[0]?.position.y + 5);
   };
 
   const closeVideoShow = () => {
