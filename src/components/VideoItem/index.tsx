@@ -11,13 +11,15 @@ interface VideoItemProps {
 }
 
 const VideoItem = ({ source, blur, expand, getPosition, itemId, closeVideo }: VideoItemProps) => {
+  
   return (
     <>
       <Video
+        style={{ filter: `blur(${blur}px)`, WebkitFilter: `blur(${blur}px)` }}
         onMouseMove={() => getPosition(itemId)}
         onMouseDown={() => closeVideo()}
         expand={expand}
-        style={{ filter: `blur(${blur}px)`, WebkitFilter: `blur(${blur}px)` }}
+        muted
         autoPlay // working
         loop
       >

@@ -8,7 +8,7 @@ interface PositionProps {
 
 export const Border = styled.div<PositionProps>`
   border: 5px solid white;
-  height: 520px;
+  height: 515px;
   position: absolute;
   z-index: 5;
   top: ${(props) => props.y}px;
@@ -33,4 +33,5 @@ export const Container = styled.div`
   align-items: center;
   height: 100vh;
   transform: scale(0.9);
+  width: min-content;
 `;
