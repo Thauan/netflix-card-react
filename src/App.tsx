@@ -32,7 +32,7 @@ const movies = [
     id: 5,
     url: "https://i2.wp.com/leninetudo.com/wp-content/uploads/2021/09/La-Casa-de-Papel-5a-Temporada-Completa-2021-Dublado.jpg?fit=1100%2C1049&ssl=1",
     video: 'la-casa-de-papel.mp4',
-    position: { x: 1490, y: 198, diff: 35 },
+    position: { x: 1490, y: 198, diff: 55 },
   },
 ];
 
